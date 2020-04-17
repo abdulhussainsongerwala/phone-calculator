@@ -1,10 +1,38 @@
 <div class="calculator">
     <div class="result">
-        Result
-        <!-- Result string goes here -->
+        {{resultString}}
     </div>
     <div class="actions">
-        Buttons
-        <!-- Buttons go here -->
+        <div class="action-row">
+            <button class="action-button" (click)='clear()'>AC</button>
+            <button class="action-button" (click)='backspace()'>Back
+                <!-- TODO: Image to be added --></button>
+            <button class="action-button" (click)='read("%")'>%</button>
+            <button class="action-button colored-button" (click)='read("/")'>/</button>
+        </div>
+        <div class="action-row">
+            <button class="action-button" (click)='read("7")'>7</button>
+            <button class="action-button" (click)='read("8")'>8</button>
+            <button class="action-button" (click)='read("9")'>9</button>
+            <button class="action-button colored-button" (click)='read("*")'>x</button>
+        </div>
+        <div class="action-row">
+            <button class="action-button" (click)='read("4")'>4</button>
+            <button class="action-button" (click)='read("5")'>5</button>
+            <button class="action-button" (click)='read("6")'>6</button>
+            <button class="action-button colored-button" (click)='read("-")'>-</button>
+        </div>
+        <div class="action-row">
+            <button class="action-button" (click)='read("1")'>1</button>
+            <button class="action-button" (click)='read("2")'>2</button>
+            <button class="action-button" (click)='read("3")'>3</button>
+            <button class="action-button colored-button" (click)='read("+")'>+</button>
+        </div>
+        <div class="action-row">
+            <button class="action-button" (click)='read(".")'>.</button>
+            <button class="action-button" (click)='read("0")'>0</button>
+            <button class="action-button" (click)='read("")'>()</button>
+            <button class="action-button evaluate-button" (click)='execute()'>=</button>
+        </div>
     </div>
 </div>

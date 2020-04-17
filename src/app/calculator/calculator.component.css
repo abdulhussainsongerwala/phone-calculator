@@ -11,3 +11,20 @@
     height: 300px;
     background-color: white;
 }
+
+.action-row {
+    height: 60px;
+}
+
+.action-button {
+    width: 90px;
+}
+
+.colored-button {
+    color: goldenrod;
+}
+
+.evaluate-button {
+    color: white;
+    background-color: goldenrod;
+}
