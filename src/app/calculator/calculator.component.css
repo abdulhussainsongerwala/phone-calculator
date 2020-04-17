@@ -1,0 +1,13 @@
+.calculator {
+    height: 600px;
+}
+
+.result {
+    height: 300px;
+    background-color: whitesmoke;
+}
+
+.actions {
+    height: 300px;
+    background-color: white;
+}
