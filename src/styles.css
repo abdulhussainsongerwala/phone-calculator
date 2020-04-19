@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+html, app-root {
+    height: 100%;
+    width: 100%;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.3rem;
+}
