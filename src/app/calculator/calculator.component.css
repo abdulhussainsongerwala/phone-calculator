@@ -5,6 +5,21 @@
 .result {
     height: 340px;
     background-color: whitesmoke;
+    position: relative;
+}
+
+#calc {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0.5rem;
+    font-size: 2rem;
+}
+
+#result {
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+  font-size: 2rem;
 }
 
 .actions {

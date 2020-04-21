@@ -32,8 +32,10 @@ export class CalculatorComponent implements OnInit {
   }
   execute() {
     const sections = this.calcString.split(/(\+|-|\*|\/)/);
-    const expression = parseFloat(sections[0]) + sections[1] + parseFloat(sections[2]);
-    const resultDecimal = eval(expression);
-    this.resultString = resultDecimal.toString();
+    if (sections.length !== 1) {
+      const expression = parseFloat(sections[0]) + sections[1] + parseFloat(sections[2]);
+      const resultDecimal = eval(expression);
+      this.resultString = resultDecimal.toString();
+    }
   }
 }
