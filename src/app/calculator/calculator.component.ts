@@ -24,7 +24,18 @@ export class CalculatorComponent implements OnInit {
       this.resultString = '';
       this.calcString = '';
     }
-    this.calcString += input;
+    if (input === '()') {
+      const regex = /\(/g;
+      const brackCount = this.calcString.match(regex) !== null ? this.calcString.match(regex).length : 0;
+      if (this.calcString.length === brackCount ||
+          brackCount === 0) {
+        this.calcString += '(';
+      } else {
+        this.calcString += ')';
+      }
+    } else {
+      this.calcString += input;
+    }
   }
   clear() {
     this.calcString = '';
