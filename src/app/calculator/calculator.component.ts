@@ -42,9 +42,19 @@ export class CalculatorComponent implements OnInit {
     this.resultString = '';
   }
   execute() {
-    const sections = this.calcString.split(/(\+|-|\*|\/)/);
+    const sections = this.calcString.split(/(\+|-|\*|\/|\(|\))/);
     if (sections.length !== 1) {
-      const expression = parseFloat(sections[0]) + sections[1] + parseFloat(sections[2]);
+      let expression = '';
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i] !== '') {
+          // TODO: this is a quick fix, need to figure out why blank spaces are there in split
+          if (i % 2 === 0) {
+            expression += parseFloat(sections[i]);
+          } else {
+            expression += sections[i];
+          }
+        }
+      }
       const resultDecimal = eval(expression);
       this.resultString = resultDecimal.toString();
     }
