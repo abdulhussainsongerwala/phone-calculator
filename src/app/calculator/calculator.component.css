@@ -1,29 +1,31 @@
 :host {
-    height: 600px;
+    height: 690px;
 }
 
 .result {
-    height: 300px;
+    height: 340px;
     background-color: whitesmoke;
 }
 
 .actions {
-    height: 300px;
+    height: 350px;
     background-color: white;
 }
 
 .action-row {
-    height: 60px;
+    height: 70px;
 }
 
 .action-button {
-    width: 90px;
+    width: 98px;
     height: 100%;
-    font-size: 1.7rem;
+    font-size: 2rem;
+    font-weight: bold
 }
 
 .colored-button {
     color: goldenrod;
+    font-size: 2.5rem;
 }
 
 .evaluate-button {
